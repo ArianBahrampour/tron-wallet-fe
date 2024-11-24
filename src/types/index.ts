@@ -1,7 +1,6 @@
 export interface Wallet {
     id: string;
     address: string;
-    privateKey: string;
 }
 
 export interface Transaction {

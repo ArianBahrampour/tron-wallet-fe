@@ -12,16 +12,23 @@ const WithdrawalForm: React.FC = () => {
     };
 
     return (
-        <Grid2 container>
+        <Grid2 container sx={{ mt: 5 }}>
             <Typography variant="h6">Request Withdrawal</Typography>
 
-            <TextField fullWidth label="To Address" value={toAddress} onChange={(e) => setToAddress(e.target.value)} />
+            <TextField
+                fullWidth
+                label="To Address"
+                value={toAddress}
+                onChange={(e) => setToAddress(e.target.value)}
+                sx={{ my: 2 }}
+            />
             <TextField
                 fullWidth
                 label="Amount"
                 type="number"
                 value={amount}
                 onChange={(e) => setAmount(Number(e.target.value))}
+                sx={{ mb: 2 }}
             />
             <Button variant="contained" onClick={handleWithdraw}>
                 Submit
