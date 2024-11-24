@@ -2,7 +2,7 @@ import axios from "axios";
 import { Wallet, Transaction } from "../types";
 
 const API = axios.create({
-    baseURL: "http://localhost:8000/api",
+    baseURL: "http://188.245.59.58:8000/api",
 });
 
 API.interceptors.request.use((config) => {
