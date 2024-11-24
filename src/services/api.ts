@@ -15,8 +15,7 @@ API.interceptors.request.use((config) => {
 
 export const generateApiKey = (): Promise<{ data: { data: { apiKey: string } } }> => API.post("/generate-api-key");
 export const createWallet = (): Promise<{ data: Wallet }> => API.post("/create-wallet");
-export const getTransactions = (address: string): Promise<{ data: Transaction[] }> =>
-    API.get(`/transactions?address=${address}`);
+export const getTransactions = (): Promise<{ data: { data: Transaction[] } }> => API.get(`/transactions`);
 export const withdraw = (data: { toAddress: string; amount: number }): Promise<{ data: { txId: string } }> =>
     API.post("/withdraw", data);
 export const getWallets = (): Promise<{ data: { data: Wallet[] } }> => API.get("/wallets");
